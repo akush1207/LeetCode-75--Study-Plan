@@ -1,0 +1,17 @@
+public boolean isSubsequence(String s, String t) {
+        if(s.length()==0){
+            return true;
+        }
+        int count = 0, i = 0, j = 0;
+        while (j < t.length()) {
+            if (s.charAt(i) == t.charAt(j)) {
+                count++;
+                i++;
+            }
+            j++;
+            if (count == s.length()) {
+                return true;
+            }
+        }
+        return false;
+    }
